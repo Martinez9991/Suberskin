@@ -1,0 +1,30 @@
+package paginas;
+
+import org.openqa.selenium.WebDriver;
+
+import com.paulhammant.ngwebdriver.ByAngular;
+import com.paulhammant.ngwebdriver.ByAngularButtonText;
+import com.paulhammant.ngwebdriver.ByAngularModel;
+import com.paulhammant.ngwebdriver.NgWebDriver;
+
+public class SuberskinTestPageObjects {
+	
+	WebDriver driver = null;
+	NgWebDriver ngWebDriver;
+	//JavaScriptExecutor jsDriver;
+	
+	ByAngularButtonText botao_cookies = ByAngular.buttonText("Aceitar");
+	ByAngularButtonText testebotao = ByAngular.("WHO WE ARE");
+	
+	
+	public void click_botao_cookies() 
+	{
+		driver.findElement(botao_cookies).click();
+	}
+
+	
+	public void click_test()
+	{
+		driver.findElement(testebotao).click();
+	}
+}
